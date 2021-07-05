@@ -117,3 +117,11 @@ docker build -t tektutor/ansible-ubuntu:latest .
 ```
 docker images
 ```
+The expected output is
+<pre>
+[jegan@tektutor Day1]$ docker images
+REPOSITORY                TAG       IMAGE ID       CREATED         SIZE
+tektutor/ansible-ubuntu   latest    d12d982656b2   6 minutes ago   221MB
+ubuntu                    16.04     065cf14a189c   2 weeks ago     135MB
+[jegan@tektutor Day1]$ 
+</pre>
