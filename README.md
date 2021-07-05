@@ -99,3 +99,21 @@ sudo su rps
 id
 docker images
 ```
+
+### Generate ssh key pairs
+```
+ssh-keygen
+```
+Accept defaults by hitting Enter button thrice 
+
+### Building custom ubuntu ansible node image
+```
+cd terraform-july-2021/Day1/ubuntu-ansible
+cp /home/rps/.ssh/id_rsa.pub authorized_keys
+docker build -t tektutor/ansible-ubuntu:latest .
+```
+
+### Check if the custom docker images is listed
+```
+docker images
+```
