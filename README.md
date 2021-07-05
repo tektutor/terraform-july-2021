@@ -77,6 +77,12 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo systemctl status docker
 ```
+
+### Check the version of docker installed
+```
+docker --version
+```
+
 ### List the groups the rps user belongs to
 ```
 id
