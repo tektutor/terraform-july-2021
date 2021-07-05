@@ -4,6 +4,7 @@ wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.
 unzip terraform_1.0.1_linux_amd64.zip
 sudo mv terraform /usr/bin
 ```
+For instruction on how to install terraform in other Operating System, you may refer https://www.terraform.io/downloads.html
 
 ### Test if terraform works fine
 ```
