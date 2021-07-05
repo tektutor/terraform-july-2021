@@ -27,4 +27,25 @@ Once the sublime text Linux rpm is downloaded
 su -
 cd /home/rps/Downloads
 rpm -i sublime-text-3211-1.x86_64.rpm
+exit
 ```
+### You may open the sublime text edition as shown below
+```
+cd ~
+subl .
+```
+
+### From CentOS Linux terminal install git version control 
+```
+su -
+yum install -y git
+```
+When prompts for password, type redhat as the root password.
+
+### Clone the tektutor repository
+```
+git clone https://github.com/tektutor/terraform-july-2021.git
+cd terraform-july-2021
+subl .
+```
+You may follow the lab instructions in the README.md file
