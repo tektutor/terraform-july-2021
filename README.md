@@ -27,4 +27,10 @@ Once the sublime text Linux rpm is downloaded
 su -
 cd /home/rps/Downloads
 rpm -i sublime-text-3211-1.x86_64.rpm
+exit
+```
+### You may open the sublime text edition as shown below
+```
+cd ~
+subl .
 ```
