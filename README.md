@@ -65,4 +65,23 @@ sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install docker-ce
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+### List the groups the rps user belongs to
+```
+id
+```
+### Notice rps user doesn't have permission to access docker commands
+```
+docker images
+```
+
+### Add rps user to docker group to gain required access to issue docker commands as rps user
+```
+sudo usermod -aG docker rps
+sudo su rps
+id
+docker images
 ```
