@@ -49,3 +49,10 @@ cd terraform-july-2021
 subl .
 ```
 You may follow the lab instructions in the README.md file
+
+### Ansible ping
+```
+cd ~
+cd terraform-july-2021/Day1
+ansible -i inventory all -m ping
+```
