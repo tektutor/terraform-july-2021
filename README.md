@@ -44,7 +44,7 @@ When prompts for password, type redhat as the root password.
 
 ### Clone the tektutor repository
 ```
-git clone https://github.com/tektutuor/terraform-july-2021.git
+git clone https://github.com/tektutor/terraform-july-2021.git
 cd terraform-july-2021
 subl .
 ```
