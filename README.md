@@ -34,3 +34,18 @@ exit
 cd ~
 subl .
 ```
+
+### From CentOS Linux terminal install git version control 
+```
+su -
+yum install -y git
+```
+When prompts for password, type redhat as the root password.
+
+### Clone the tektutro repository
+```
+git clone https://github.com/tektutuor/terraform-july-2021.git
+cd terraform-july-2021
+subl .
+```
+You may follow the lab instructions in the README.md file
