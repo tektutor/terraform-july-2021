@@ -56,3 +56,13 @@ cd ~
 cd terraform-july-2021/Day1
 ansible -i inventory all -m ping
 ```
+
+
+### Installing Docker Community Edition
+```
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+```
