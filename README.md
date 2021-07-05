@@ -49,3 +49,53 @@ cd terraform-july-2021
 subl .
 ```
 You may follow the lab instructions in the README.md file
+
+### Ansible ping
+```
+cd ~
+cd terraform-july-2021/Day1
+ansible -i inventory all -m ping
+```
+
+
+### Installing Docker Community Edition
+```
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+### In case you get any error, try the below
+```
+sudo yum install -y docker-ce --allowerasing
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
+
+### Check the version of docker installed
+```
+docker --version
+```
+
+### List the groups the rps user belongs to
+```
+id
+```
+### Notice rps user doesn't have permission to access docker commands
+```
+docker images
+```
+
+### Add rps user to docker group to gain required access to issue docker commands as rps user
+```
+sudo usermod -aG docker rps
+sudo su rps
+id
+docker images
+```
