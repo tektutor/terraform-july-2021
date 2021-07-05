@@ -114,7 +114,7 @@ cd Day1/ubuntu-ansible
 cp /home/rps/.ssh/id_rsa.pub authorized_keys
 docker build -t tektutor/ansible-ubuntu:latest .
 ```
-When you copy 
+When you copy authorized_keys, it will prompt Are you sure you want to overwrites (yes/no).  You need to type yes.
 
 ### Check if the custom docker images is listed
 ```
