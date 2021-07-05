@@ -69,6 +69,14 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo systemctl status docker
 ```
+
+### In case you get any error, try the below
+```
+sudo yum install -y docker-ce --allowerasing
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
 ### List the groups the rps user belongs to
 ```
 id
