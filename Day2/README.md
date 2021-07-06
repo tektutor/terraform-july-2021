@@ -1,3 +1,72 @@
+### Install Ansible (Run this command as rps user)
+```
+sudo yum install -y epel-release
+sudo yum install -y ansible
+```
+
+### Check if ansible is installed properly (Run this command as rps user)
+```
+ansible --version
+```
+The expected output is
+<pre>
+jegan@tektutor terraform-july-2021]$ ls
+Day1  Day2  README.md
+[jegan@tektutor terraform-july-2021]$ ansible --version
+ansible 2.9.23
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/jegan/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.6.8 (default, Aug 24 2020, 17:57:11) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
+[jegan@tektutor terraform-july-2021]$ 
+</pre>
+
+### Check if you can ping the localhost using ansible ad-hoc command
+```
+cd /home/rps/terraform-july-2021/Day1
+ansible -i inventory all -m ping
+```
+The expected output is
+<pre>
+[jegan@tektutor terraform-july-2021]$ cd Day1
+[jegan@tektutor Day1]$ ls
+inventory  README.md  ubuntu-ansible  url.txt
+[jegan@tektutor Day1]$ ansible -i inventory all -m ping
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+</pre>
+
+### Create ansible node containers using the above custom docker image
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu:latest
+```
+
+### Open firewall ports
+```
+sudo firewall-cmd --zone=public --permanent --add-port=2001/tcp
+sudo firewall-cmd --zone=public --permanent --add-port=2001/tcp
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+```
+
+### List the two containers and see if they running
+```
+docker ps
+```
+
+### Test if you can perform ssh to ubuntu1 and ubuntu2 containers without typing password
+```
+ssh -p 2001 tektutor@localhost
+ssh -p 2002 tektutor@localhost
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
