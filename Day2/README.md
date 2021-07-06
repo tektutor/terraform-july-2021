@@ -48,6 +48,14 @@ docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/a
 docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu:latest
 ```
 
+### Open firewall ports
+```
+sudo firewall-cmd --zone=public --permanent --add-port=2001/tcp
+sudo firewall-cmd --zone=public --permanent --add-port=2001/tcp
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+```
+
 ### List the two containers and see if they running
 ```
 docker ps
