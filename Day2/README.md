@@ -126,8 +126,8 @@ docker images
 
 ### Create ubuntu1 and ubuntu2 containers
 ```
-docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tekturor/ansible-ubuntu:latest
-docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tekturor/ansible-ubuntu:latest
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu:latest
 ```
 
 ### Clear the known_host file
