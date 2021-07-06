@@ -138,7 +138,7 @@ echo "" > /home/rps/.ssh/known_hosts
 ### Executing the install apache web server playbook with ansible.cfg file
 ```
 cd Day2
-ansible-playbook install-apache2-webserver-playbook.yml
+ansible-playbook install-apache-webserver-playbook.yml
 cd ..
 ```
 
