@@ -67,6 +67,12 @@ ssh -p 2001 tektutor@localhost
 ssh -p 2002 tektutor@localhost
 ```
 
+### See if you can ping ubuntu1 and ubuntu2 ansible nodes via ansible ad-hoc command
+```
+cd /home/rps/terraform-july-2021/Day2
+ansible -i inventory all -m ping
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
