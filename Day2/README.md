@@ -22,6 +22,12 @@ ansible 2.9.23
 [jegan@tektutor terraform-july-2021]$ 
 </pre>
 
+### Check if you can ping the localhost using ansible ad-hoc command
+```
+cd /home/rps/terraform-july-2021/Day1
+ansible -i inventory all -m ping
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
