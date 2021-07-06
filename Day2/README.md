@@ -112,6 +112,13 @@ ansible-playbook ping-playbook.yml
 exit
 ```
 
+### Executing the install apache web server playbook with ansible.cfg file
+```
+cd Day2
+ansible-playbook install-apache2-webserver-playbook.yml
+exit
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
