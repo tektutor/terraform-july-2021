@@ -27,6 +27,20 @@ ansible 2.9.23
 cd /home/rps/terraform-july-2021/Day1
 ansible -i inventory all -m ping
 ```
+The expected output is
+<pre>
+[jegan@tektutor terraform-july-2021]$ cd Day1
+[jegan@tektutor Day1]$ ls
+inventory  README.md  ubuntu-ansible  url.txt
+[jegan@tektutor Day1]$ ansible -i inventory all -m ping
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+</pre>
 
 ### Install terraform
 ```
