@@ -2,9 +2,10 @@
   hosts: all
   become: yes
   vars:
-    - provisioner_tool: Docker
     - conf_mgr_tool: Ansible
     - greeting_msg: DevOps!
+  vars_files:
+    - my_var_file
   tasks:
    - name: Install apache web server
      apt: name=apache2 state=latest update_cache=yes
