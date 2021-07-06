@@ -116,6 +116,7 @@ cd ..
 ```
 docker rm -f $(docker ps -aq)
 cd /home/rps/terraform-july-2021/Day1/ubuntu-ansible
+cp /home/rps/.ssh/id_rsa.pub authorized_keys
 docker build -t tektutor/ansible-ubuntu:latest .
 ```
 
