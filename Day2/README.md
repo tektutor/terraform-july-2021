@@ -42,6 +42,23 @@ localhost | SUCCESS => {
 }
 </pre>
 
+### Create ansible node containers using the above custom docker image
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ansible-ubuntu:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ansible-ubuntu:latest
+```
+
+### List the two containers and see if they running
+```
+docker ps
+```
+
+### Test if you can perform ssh to ubuntu1 and ubuntu2 containers without typing password
+```
+ssh -p 2001 root@localhost
+ssh -p 2002 root@localhost
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
