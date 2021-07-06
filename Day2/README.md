@@ -102,21 +102,21 @@ git pull
 ```
 cd Day2
 ansible-playbook -i hosts ping-playbook.yml
-exit
+cd ..
 ```
 
 ### Executing the ping playbook with ansible.cfg file
 ```
 cd Day2
 ansible-playbook ping-playbook.yml
-exit
+cd ..
 ```
 
 ### Executing the install apache web server playbook with ansible.cfg file
 ```
 cd Day2
 ansible-playbook install-apache2-webserver-playbook.yml
-exit
+cd ..
 ```
 
 ### Install terraform
