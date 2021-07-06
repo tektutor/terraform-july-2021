@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Jeganathan Swaminathan <jegan@tektutor.org>
 
-RUN apt-get update && apt-get install -y openssh-server python3
+RUN apt-get update && apt-get install -y openssh-server python3 sudo
 RUN mkdir /var/run/sshd
 
 RUN useradd -m -p tektutor -s /bin/bash tektutor
@@ -21,6 +21,8 @@ RUN mkdir -p /home/tektutor/.ssh
 COPY authorized_keys /home/tektutor/.ssh/authorized_keys
 RuN chown -R tektutor:tektutor /home/tektutor/.ssh
 RUN chmod 755 -R /home/tektutor/.ssh
+
+COPY sudoers /etc/sudoers
 
 EXPOSE 22
 EXPOSE 80 

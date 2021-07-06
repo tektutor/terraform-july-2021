@@ -1,0 +1,16 @@
+- name: This playbook will install apache web server in ubuntu ansible nodes
+  hosts: all
+  become: yes
+  vars:
+    - provisioner_tool: Docker
+    - conf_mgr_tool: Ansible
+    - greeting_msg: DevOps!
+  tasks:
+   - name: Install apache web server
+     apt: name=apache2 state=latest update_cache=yes
+
+   - name: Start apache web server
+     shell: service apache2 start
+
+   - name: Deploy custom web page
+     template: src=index.html.j2 dest=/var/www/html/index.html 
