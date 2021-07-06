@@ -92,14 +92,24 @@ ansible -i inventory all -m ping
 7. Ansible finally gives a summary of output collected from all the ansible nodes.
 
 
+### Make sure you have the latest code
+```
+cd /home/rps/terraform-july-2021
+git pull
+```
+
 ### Executing the ping playbook without ansible.cfg file
 ```
+cd Day2
 ansible-playbook -i hosts ping-playbook.yml
+exit
 ```
 
 ### Executing the ping playbook with ansible.cfg file
 ```
+cd Day2
 ansible-playbook ping-playbook.yml
+exit
 ```
 
 ### Install terraform
