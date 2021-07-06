@@ -3,6 +3,11 @@
 sudo yum install -y epel-release
 sudo yum install -y ansible
 ```
+
+### Check if ansible is installed properly (Run this command as rps user)
+```
+ansible --version
+```
 The expected output is
 <pre>
 jegan@tektutor terraform-july-2021]$ ls
@@ -16,11 +21,6 @@ ansible 2.9.23
   python version = 3.6.8 (default, Aug 24 2020, 17:57:11) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
 [jegan@tektutor terraform-july-2021]$ 
 </pre>
-
-### Check if ansible is installed properly (Run this command as rps user)
-```
-ansible --version
-```
 
 ### Install terraform
 ```
