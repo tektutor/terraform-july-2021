@@ -144,8 +144,10 @@ cd ..
 ```
 
 ### Install terraform
+You may download terraform from https://www.terraform.io/downloads.html
+You need to select Linux 64-bit
+
 ```
-wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
 unzip terraform_1.0.1_linux_amd64.zip
 sudo mv terraform /usr/bin
 ```
