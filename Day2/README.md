@@ -85,7 +85,7 @@ ansible -i inventory all -m ping
 
 4. Gives execute permission to the python script on the ansible nodes
 
-5. Ansible execute the ping.py on the Ansible node and captures the output
+5. Ansible will then executes the ping.py on the Ansible node and captures the output
 
 6. Ansible will then cleanup the tmp folders created on the Ansible Nodes
 
