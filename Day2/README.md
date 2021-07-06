@@ -63,8 +63,8 @@ docker ps
 
 ### Test if you can perform ssh to ubuntu1 and ubuntu2 containers without typing password
 ```
-ssh -p 2001 root@localhost
-ssh -p 2002 root@localhost
+ssh -p 2001 tektutor@localhost
+ssh -p 2002 tektutor@localhost
 ```
 
 ### Install terraform
