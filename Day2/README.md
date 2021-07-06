@@ -3,6 +3,19 @@
 sudo yum install -y epel-release
 sudo yum install -y ansible
 ```
+The expected output is
+<pre>
+jegan@tektutor terraform-july-2021]$ ls
+Day1  Day2  README.md
+[jegan@tektutor terraform-july-2021]$ ansible --version
+ansible 2.9.23
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/jegan/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.6/site-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.6.8 (default, Aug 24 2020, 17:57:11) [GCC 8.3.1 20191121 (Red Hat 8.3.1-5)]
+[jegan@tektutor terraform-july-2021]$ 
+</pre>
 
 ### Check if ansible is installed properly (Run this command as rps user)
 ```
