@@ -1,3 +1,14 @@
+### Install Ansible (Run this command as rps user)
+```
+sudo yum install -y epel-release
+sudo yum install -y ansible
+```
+
+### Check if ansible is installed properly (Run this command as rps user)
+```
+ansible --version
+```
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
