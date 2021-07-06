@@ -73,6 +73,28 @@ cd /home/rps/terraform-july-2021/Day2
 ansible -i inventory all -m ping
 ```
 
+### What really happens when you run an ansible ad-hoc command
+```
+ansible -i inventory all -m ping
+```
+1. In the above command ping.py python script from /usr/lib/python3.6/site-packages/ansible/modules/system/ping.py will copied to the /home/rps/.ansible/tmp folder and then prepares a plain python script copying all imported code as inline python code.
+
+2. Retrieves SSH connection details from inventory file and does an SSH to ubuntu1 and ubuntu2 ansible nodes, and creates a tmp folder under /home/tektutor/.ansible/tmp 
+
+3. Copies the ping.py from ACM /home/rps/.ansible/tmp folder and put it in /home/tektutor/.ansible/tmp folder
+
+4. Gives execute permission to the python script on the ansible nodes
+
+5. Ansible execute the ping.py on the Ansible node and captures the output
+
+6. Ansible will then cleanup the tmp folders created on the Ansible Nodes
+
+7. Ansible finally gives a summary of output collected from all the ansible nodes.
+
+
+
+
+
 ### Install terraform
 ```
 wget https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
