@@ -77,7 +77,7 @@ ansible -i inventory all -m ping
 ```
 ansible -i inventory all -m ping
 ```
-1. In the above command ping.py python script from /usr/lib/python3.6/site-packages/ansible/modules/system/ping.py will copied to the /home/rps/.ansible/tmp folder and then prepares a plain python script copying all imported code as inline python code.
+1. In the above command ping.py python script from /usr/lib/python3.6/site-packages/ansible/modules/system/ping.py will be copied to the /home/rps/.ansible/tmp folder and then prepares a plain python script copying all imported code as inline python code.
 
 2. Retrieves SSH connection details from inventory file and does an SSH to ubuntu1 and ubuntu2 ansible nodes, and creates a tmp folder under /home/tektutor/.ansible/tmp 
 
