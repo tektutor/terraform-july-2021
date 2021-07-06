@@ -92,8 +92,15 @@ ansible -i inventory all -m ping
 7. Ansible finally gives a summary of output collected from all the ansible nodes.
 
 
+### Executing the ping playbook without ansible.cfg file
+```
+ansible-playbook -i hosts ping-playbook.yml
+```
 
-
+### Executing the ping playbook with ansible.cfg file
+```
+ansible-playbook ping-playbook.yml
+```
 
 ### Install terraform
 ```
