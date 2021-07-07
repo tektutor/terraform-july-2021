@@ -1,7 +1,7 @@
 ### Terraform Overview
 ```
-- Terraform is a Infrastructure as a Coding Tool
-- Developed by HashiCorp as a Open source project
+- Terraform is a Infrastructure as a Code(IAC) Tool
+- Developed by HashiCorp as an Open source project
 - Could be used to automate all known Cloud Infrastructures and Local VMs, Docker, Kubernetes, etc
 - Terraform uses a declarative language called HCL (Hashicorp Configuration Language)
 - The extension of terraform configuration files is .tf
