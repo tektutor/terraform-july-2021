@@ -6,18 +6,23 @@
 - Terraform uses a declarative language called HCL (Hashicorp Configuration Language)
 - The extension of terraform configuration files is .tf
 - Though terraform configuration files can be names are user-defined, as a industry best practice main.tf is recommended
+
 - Providers
     - Third-party Platforms that supports API
     - AWS, Azure, GCP, DataDog, Grafana, MySQL, MongoDB, etc.,
+    
 - Supports several 100s of Providers
+
 - Terraform Providers are of 3 types
   1. Official ( e.g AWS, GCP, Azure )
   2. Verified and
   3. Community
+  
 - Terraform uses .tfstate file to store the current status of the infrastructure resources managed by Terraform
 - Terraform state is the blueprint of the infrastructure resources managed by Terraform
 - Terraform Cloud and Terraform Enterprise 
 	- offers useful features to work as a Team
+	
 - Other types of IAC Tools
 
     - Configuration Management Tools
