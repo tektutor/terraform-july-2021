@@ -122,6 +122,7 @@ resource "aws_network_interface" "tektutor_nic" {
 	}
 }
 
+
 resource "aws_instance" "ubuntu1" {
 	ami = "ami-09e67e426f25ce0d7"
 	instance_type = "t2.micro"
@@ -152,4 +153,3 @@ resource "aws_instance" "ubuntu1" {
 		Name = "ubuntu1"
 	}
 }
-

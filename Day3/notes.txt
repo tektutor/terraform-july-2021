@@ -1,0 +1,38 @@
+
+VPC - Your own private Network (For your organization)
+	CIDR - 192.168.0.0/16 (IP Range)
+
+	IPV4 Address (4 bytes - 32 bits)
+
+	192.168 - Fixed
+	0.0	- Can vary
+
+	192.168.0.0
+	192.168.0.1
+
+	...
+	192.168.0.255
+
+
+	192.168.1.0
+	192.168.1.1
+	...
+	192.168.1.255
+
+	...
+	192.168.255.255
+
+	256 x 256 = 65536 IP Addresses
+
+
+VPC can be further broken down into many Subnets
+	CIDR - 192.168.0.0/16
+
+Each Subnet in turn should be assigned one CIDR block
+The CIDR block that is assigned to Subnet should be with the VPC CIDR Block
+
+Valid CIDR block for Subnet
+	192.168.1.0/24 - is a subset of 192.168.0.0/16
+	192.168.2.0/24 - is a subset of 192.168.0.0/16
+
+192.168.1.0/24
