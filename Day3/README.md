@@ -8,7 +8,7 @@
 - Though terraform configuration files can be names are user-defined, as a industry best practice main.tf is recommended
 
 - Providers
-    - Third-party Platforms that supports API
+    - Terraform Plugins that helps Terraform to interact with external third-party Platforms that supports API
     - AWS, Azure, GCP, DataDog, Grafana, MySQL, MongoDB, etc.,
     
 - Supports several 100s of Providers
