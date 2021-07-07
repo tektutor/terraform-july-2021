@@ -101,3 +101,49 @@ Map elements can be accessed as shown below
 var.software_paths["jdk_home"]
 var.software_paths["m2_home"]
 ```
+
+### List of string
+```
+variable "softwares" {
+    type = list(string)
+    default = [ "ansble", "terraform", "docker" ]
+}
+In case the variable value is not of type string then Terraform will report errors.
+```
+
+### List of number
+```
+variable "cpu_cores" {
+   type = list(number)
+   default = ["2", "4", "8"]
+}
+```
+
+### Object variable
+```
+variable "vm_configuration" {
+   type = object( {
+      name_of_vm = string
+      ram_in_gb  = string
+      cpu_cores = number
+      storage_in_gb = string
+      is_ssd = bool
+   })
+
+   default = {
+      name_of_vm = "ubuntu1"
+      ram_in_gb = "128 GB"
+      cpu_cores = 48
+      storage_in_gb = "1 TB"
+      is_ssd = true
+   }
+}
+```
+
+### Tuple - elements of different types 
+```
+variable "vm_configuration" {
+   type = tuple ( [string, string, number, string, bool ] )
+   default = [ "ubuntu1", "128 GB", 48, "1 TB", true ]
+}
+```
