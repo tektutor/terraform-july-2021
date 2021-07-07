@@ -200,3 +200,16 @@ variable "vm_configuration" {
    default = [ "ubuntu1", "128 GB", 48, "1 TB", true ]
 }
 ```
+
+### Passing variables from command line
+```
+terraform apply -var=ami_id="ami-aabbccdd13234324"
+terraform apply -var=ami_id_list=["ami-1234", "ami-3434", "ami-5353"] -var="instance_type=t2.micro"
+```
+
+### Visualize dependencies
+```
+sudo yum install -y epel-release
+sudo yum install  -y graphviz
+terraform graph | dot -Tsvf > graph.svg
+```
