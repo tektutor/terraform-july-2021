@@ -55,6 +55,59 @@ Provisioning Tools
   - Terraform supports private and public cloud
 ```
 
+### Sample Terraform Configuration Script
+
+You may create a file create-docker-container.tf with below contents
+
+```
+terraform {
+  required_providers {
+	docker = {
+		source  = "kreuzwerker/docker"
+		version = "2.13.0"
+	}
+  }
+}
+
+provider "docker" {
+   host = "unix:///var/run/docker.sock"
+}
+
+resource "docker_image" "nginx" {
+	name = "nginx:latest"
+}
+
+resource "docker_container" "nginx1" {
+	image = docker_image.nginx.latest
+	name = "nginx1_container"
+}
+```
+
+### Install provider plugins
+```
+terraform init
+```
+
+### Verify the plan before you apply the changes before you provision
+```
+terraform plan
+```
+
+### Provision the infrastructure
+```
+terraform apply
+```
+
+### Refresh the terraform state
+```
+terraform refresh
+```
+
+### Display the current status of resources managed by terraform
+```
+terraform show
+```
+
 ### Terraform Variables
 ```
 variable "ubuntu_ami" {
