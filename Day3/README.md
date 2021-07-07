@@ -9,7 +9,7 @@
 - Providers
     - Third-party Platforms that supports API
     - AWS, Azure, GCP, DataDog, Grafana, MySQL, MongoDB, etc.,
-- Supports severall 100s of Providers
+- Supports several 100s of Providers
 - Terraform Providers are of 3 types
   1. Official ( e.g AWS, GCP, Azure )
   2. Verified and
