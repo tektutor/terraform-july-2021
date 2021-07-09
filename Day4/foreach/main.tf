@@ -1,6 +1,6 @@
 data "local_file" "myfile" {
-    filename = each.value
     for_each = var.files
+    filename = each.value
 }
 
 output "display_file_contents" {
