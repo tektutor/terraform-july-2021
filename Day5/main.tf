@@ -1,7 +1,7 @@
 provider "aws" {
 	region 		= "us-east-1"
-	access_key	= "your-access-key"
-	secret_key	= "your-secret-key"
+	access_key	= ""AKIA5ZKFJ54SESAHCZKV
+	secret_key	= "bejhta9zGPhmwp/Uql2+G8kkeck5zR6Fkf95tEVu"
 }
 
 resource "aws_vpc" "tektutor_vpc" {
